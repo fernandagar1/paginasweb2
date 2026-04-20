@@ -1,141 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Currículum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Fernanda Paola Garduño Esquivel</title>
+    <style>
+        /* Definición de colores y estilos generales */
+        :root {
+            --color-terracota: #a67368; /* Color de las bandas y títulos */
+            --color-fondo: #e3ddd5;     /* Color de fondo crema de la imagen */
+            --texto-principal: #1a1a1a;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
+        body {
+            background-color: #f5f5f5; /* Fondo fuera del papel */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
 
-.container {
-    width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-top: 15px solid #b56a5a;
-    border-bottom: 15px solid #b56a5a;
-}
+        /* Contenedor principal que simula la hoja de papel */
+        .cv-container {
+            background-color: var(--color-fondo);
+            width: 800px;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+            border-top: 15px solid var(--color-terracota); /* Banda superior */
+            border-bottom: 15px solid var(--color-terracota); /* Banda inferior */
+        }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-}
+        /* Iconos de la esquina superior derecha */
+        .top-icons {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
 
-h1 {
-    margin: 0;
-}
+        .top-icons img {
+            width: 18px;
+            opacity: 0.7;
+        }
 
-.section {
-    margin-top: 20px;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
 
-.line {
-    border-bottom: 2px solid #b56a5a;
-    margin: 10px 0;
-}
+        /* Estilo para el nombre con tipografía elegante */
+        .header-info h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 38px;
+            color: var(--texto-principal);
+            margin: 0;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
 
-.columns {
-    display: flex;
-    justify-content: space-between;
-}
+        .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
 
-.col {
-    width: 48%;
-}
-</style>
+        .foto-perfil {
+            width: 160px;
+            height: 180px;
+            border: 1px solid #ccc;
+            object-fit: cover;
+        }
 
+        /* Perfil Profesional */
+        .profile-summary {
+            margin-top: 30px;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Secciones del CV */
+        h2 {
+            border-top: 1px solid var(--color-terracota);
+            border-bottom: 1px solid var(--color-terracota);
+            color: var(--texto-principal);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            padding: 5px 0;
+            margin: 30px 0 15px 0;
+            text-transform: uppercase;
+        }
+
+        .job-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .job-description {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
+
+        /* Diseño de dos columnas para Educación y Habilidades */
+        .grid-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            font-size: 13px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="cv-container">
+        <div class="top-icons">
+            <img src="cv/lock.png" alt="Cerrar">
+            <img src="cv/copy.png" alt="Copiar">
+            <img src="cv/share.png" alt="Compartir">
+        </div>
 
-<div class="header">
-<div>
-<h1>FERNANDA PAOLA<br>GARDUÑO ESQUIVEL</h1>
+        <header>
+            <div class="header-info">
+                <h1>FERNANDA PAOLA<br>GARDUÑO ESQUIVEL</h1>
+                <div class="contact-info">
+                    <strong>Celular:</strong> 722 770 9955<br>
+                    <strong>Correo:</strong> fgardunoesquivel@gmail.com<br>
+                    <strong>Dirección:</strong> San Andres del Pedregal<br>
+                    <strong>Fecha de nacimiento:</strong> 28 de diciembre del 2008<br>
+                    <strong>Edad:</strong> 17 años
+                </div>
+            </div>
+            <img src="cv/foto.jpg" alt="Foto de Perfil" class="foto-perfil">
+        </header>
 
-<p>Celular: 742 770 9955</p>
-<p>Correo: fgardunoesquivel@gmail.com</p>
-<p>Dirección: San Andrés del Pedregal</p>
-<p>Fecha de nacimiento: 28 de diciembre del 2008</p>
-<p>Edad: 17 años</p>
-</div>
+        <section class="profile-summary">
+            Soy una estudiante del instituto cultural canadiense curso el sexto semestre, 
+            por las tardes trabajo en el negocio familiar y ahí desarrollo mis habilidades 
+            como es el control del sistema para el orden del inventario las entradas y 
+            salidas de mercancía así como también el dinero, los porcentajes y elevaciones 
+            que a veces puede tener cada producto.
+        </section>
 
-<!-- Imagen opcional -->
-<!-- Si quieres imagen, descomenta esto y pon tu foto -->
-<!-- <img src="foto.jpg" width="120"> -->
+        <h2>EXPERIENCIA LABORAL</h2>
+        <div class="job-title">NEGOCIOS EN ABARROTERIAS</div>
+        <p class="job-description">
+            Administración de mercancía de ingreso a los negocios, conocimiento en los 
+            inventarios, salidas y entradas de dinero, conocimiento en porcentajes y 
+            ganancias de cada producto.
+        </p>
 
-</div>
+        <h2>FORMACIÓN ACADÉMICA</h2>
+        <div class="grid-section">
+            <div>
+                <ul>
+                    <li><strong>Kinder:</strong> en el colegio oxford - 2014</li>
+                    <li><strong>Primaria:</strong> en el colegio oxford - 2015-2020</li>
+                    <li><strong>Secundaria:</strong> en el colegio oxford - 2020-2023</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><strong>Preparatoria:</strong> en el instituto cultural canadiense - 2023-2026</li>
+                </ul>
+            </div>
+        </div>
 
-<div class="section">
-<p>
-Soy una estudiante del instituto cultural canadiense, curso el sexto semestre.
-Por las tardes trabajo en el negocio familiar y desarrollo habilidades como
-control de inventario, entradas y salidas de mercancía y manejo de dinero.
-</p>
-</div>
-
-<div class="section">
-<h3>EXPERIENCIA LABORAL</h3>
-<div class="line"></div>
-
-<p><b>NEGOCIOS EN ABARROTERÍAS</b></p>
-<p>
-Administración de mercancía, inventarios, entradas y salidas de dinero,
-porcentajes y ganancias de productos.
-</p>
-</div>
-
-<div class="section">
-<h3>FORMACIÓN ACADÉMICA</h3>
-<div class="line"></div>
-
-<div class="columns">
-<div class="col">
-<ul>
-<li>Kinder en colegio Oxford - 2014</li>
-<li>Primaria en colegio Oxford - 2015-2020</li>
-<li>Secundaria en colegio Oxford - 2020-2023</li>
-</ul>
-</div>
-
-<div class="col">
-<ul>
-<li>Preparatoria instituto cultural canadiense - 2023-2026</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="section">
-<h3>HABILIDADES</h3>
-<div class="line"></div>
-
-<div class="columns">
-<div class="col">
-<ul>
-<li>Pensamiento matemático</li>
-<li>Trabajo en equipo</li>
-<li>Cocina</li>
-<li>Responsable con metas</li>
-</ul>
-</div>
-
-<div class="col">
-<ul>
-<li>Conocimiento de sistema de negocio</li>
-</ul>
-</div>
-</div>
-</div>
-
-</div>
+        <h2>HABILIDADES</h2>
+        <div class="grid-section">
+            <div>
+                <ul>
+                    <li>Desarrollo habilidades en el pensamiento matemático</li>
+                    <li>Buena trabajando en equipo</li>
+                    <li>Buena haciendo de comer</li>
+                    <li>Realizo todo lo que me propongo para alcanzar mi meta</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Tengo el conocimiento de sistema de un negocio</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
-
